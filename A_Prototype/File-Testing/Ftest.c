@@ -8,11 +8,11 @@ void swap_str(char **x, char **y){
     *y = temp;
 }
 
-void swap(long int *x, long int *y){
-    long int temp = *x;
-    *x = *y;
-    *y = temp;
-}
+// void swap(long int *x, long int *y){
+//     long int temp = *x;
+//     *x = *y;
+//     *y = temp;
+// }
 
 
 
