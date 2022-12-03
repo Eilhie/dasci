@@ -8,8 +8,8 @@ void swap_str(char **x, char **y){
     *y = temp;
 }
 
-void swap(int *x, int *y){
-    int temp = *x;
+void swap(long int *x, long int *y){
+    long int temp = *x;
     *x = *y;
     *y = temp;
 }
@@ -19,16 +19,16 @@ void swap(int *x, int *y){
 int main(){
 
     FILE *fp;
-    fp = fopen("filedata.in", "r");
+    fp = fopen("testdata.in", "r");
 
     int testcases;
     fscanf(fp, "%d\n", &testcases);
 
-    int nums[testcases];
-    char *name[testcases];
+    long int nums[1000];
+    char *name[1000];
     char temp[100];
     for(int i = 0; i < testcases; i++){
-        fscanf(fp,"%d#%[^\n]\n", &nums[i], temp);    
+        fscanf(fp,"%ld#%[^\n]\n", &nums[i], temp);    
         int len = strlen(temp);
         name[i] = malloc(100*sizeof(char));
         strcpy(name[i], temp);
@@ -45,7 +45,7 @@ int main(){
 
 
     for(int i = 0; i < testcases; i++){
-        printf("%d %s\n", nums[i], name[i]);
+        printf("%ld %s\n", nums[i], name[i]);
     }
 
     return 0;
