@@ -8,13 +8,11 @@ void swap(char *x, char *y){
     *y = temp;
 }
 
-char partition(char array[], int low, int high){
-    int pivotValue = array[high];
-
+int partition(char array[], int low, int high){
     int i = low;
 
     for(int j=low; j<high; j++){
-        if(array[j]<=pivotValue){
+        if(array[j]<=array[high]){
             swap(&array[i], &array[j]);
             i++;
         }
