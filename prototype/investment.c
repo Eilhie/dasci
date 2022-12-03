@@ -10,6 +10,7 @@ int main(){
     for(int i = 1; i <= months; i++){
         money += money * minterest;  
     }
+    
    printf("%.0f\n", money);
 
     return 0;
