@@ -18,7 +18,7 @@ int getsteps(int x, int y, int tx, int ty){
 			
 		else {
 
-			int x1, y1, x2, y2;
+			int x1, y1, x2, y2, tx1, ty1, tx2, ty2;
 
 			if (x <= tx) {
 				if (y <= ty) {
@@ -45,7 +45,32 @@ int getsteps(int x, int y, int tx, int ty){
 					y2 = y - 2;
 				}
 			}
-			dp[abs(x - tx)][abs(y - ty)] = min(getsteps(x1, y1, tx, ty),getsteps(x2, y2, tx, ty)) + 1;
+			if (x <= tx) {
+				if (y <= ty) {
+					tx1 = tx + 2;
+					ty1 = ty + 1;
+					tx2 = tx + 1;
+					ty2 = ty + 2;
+				} else {
+					tx1 = tx + 2;
+					ty1 = ty - 1;
+					tx2 = tx + 1;
+					ty2 = ty - 2;
+				}
+			} else {
+				if (y <= ty) {
+					tx1 = tx - 2;
+					ty1 = ty + 1;
+					tx2 = tx - 1;
+					ty2 = ty + 2;
+				} else {
+					tx1 = tx - 2;
+					ty1 = ty - 1;
+					tx2 = tx - 1;
+					ty2 = ty - 2;
+				}
+			}
+			dp[abs(x - tx)][abs(y - ty)] = min(getsteps(x1, y1, tx1, ty1), getsteps(x2, y2, tx2, ty2)) + 1;
 
 			dp[abs(y - ty)][abs(x - tx)] = dp[abs(x - tx)][abs(y - ty)];
 			return dp[abs(x - tx)][abs(y - ty)];
@@ -53,8 +78,7 @@ int getsteps(int x, int y, int tx, int ty){
 	}
 }
 
-int main()
-{
+int main(){
 	int i, n, x, y, tx, ty, ans;
 
 	n = 8;
@@ -63,8 +87,8 @@ int main()
 	scanf(" %d", &T);
 	for(int j=0; j<T; j++){
 		char cx, cx1;
-        int maxcount;
-        scanf("%d", &maxcount); getchar();
+		int max;
+		scanf("%d", &max);
         scanf(" %c%d %c%d", &cx, &y, &cx1, &ty);
         x = cx - 64; 
 		tx = cx1 - 64; 	
@@ -88,11 +112,10 @@ int main()
 
 			ans = getsteps(x, y, tx, ty);
 		}
-		if((ans/2) > maxcount)
-		    printf("Case #%d: NO\n",j+1); 
-        else
-            printf("Case #%d: YES\n",j+1); 
-	}   
+
+		if(ans > max) printf("Case #%d: NO\n", j + 1); 
+		else printf("Case #%d: YES\n", j + 1);
+	}
 
 	return 0;
 }
