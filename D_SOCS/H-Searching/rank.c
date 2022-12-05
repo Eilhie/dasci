@@ -1,64 +1,56 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+#include<stdlib.h>
 
-void swapNum(int *x, int *y){
-    int temp;
-    *x = *y;
-    *y = temp;
+void swapNum(long int *num1,long int *num2)
+{
+    long long int tmpNum= *num1;
+    *num1= *num2;
+    *num2= tmpNum;
 }
 
-void swapStr(char **a, char **b){
-    char *temp;
-    strcpy(temp, *a);
-    strcpy(*a, *b);
-    strcpy(*b, temp);
+void swap(char **str,char **mystr){
+    char *temp = *str;
+    *str = *mystr;
+    *mystr = temp;
+
 }
 
-int main(){
 
-    int testCases;
-    scanf("%d", &testCases);
-    for(int i = 0; i < testCases; i++){
-        int len;
-        scanf("%d", &len);
-        char *name[len];
-        
-        int score[len];
-        for(int j = 0; j < len; j++){
-            char temp[100];
-            scanf("%[^#]#%d", temp, &score[j]); getchar();
-            name[j] = malloc(100*sizeof(char));
-            strcpy(name[j], temp);
-        }
-        char search[100];
-        scanf("%[^\n]", search);
-
-
-        
-
-        for(int j = 0; j < len - 1; j++){
-            for(int k = 0; k < len - 1 - j; k++){
-                if(score[k] > score[k + 1]){
-                    swapNum(&score[k], &score[k + 1]);
-                    swapStr(name + k, name + k + 1);
-                } else if(score[k] == score[k + 1]){
-                    if(strcmp(name[k], name[k + 1]) > 0){
-                        swapStr(name + k, name + k + 1);
-                    }
-                }
+int main()
+{    
+    FILE *fp;
+    fp = fopen("testdata.in","r");
+    int testcase;
+    fscanf(fp,"%d\n",&testcase);
+//    scanf("%d",&testcase);
+    long int angka[1010];
+    char *plants[1010];
+    char temp[1010];
+    int i;
+    for(i=0;i<testcase;i++){
+        fscanf(fp,"%ld#%[^\n]\n",&angka[i],temp);
+//        scanf("%ld#%[^\n]",&angka[i],temp);
+//        getchar();        
+        plants[i] = malloc(strlen(temp)*sizeof(char*));
+        strcpy(plants[i],temp);
+    }
+    fclose(fp);
+    int j;
+    int count = testcase;
+    for(i=0;i<count-1;i++){
+        for(j=0;j<count-i-1;j++){
+                if(strcmp(plants[j],plants[j+1])>0){
+                    swap(plants+j,plants+j+1);
+                    swapNum(&angka[j],&angka[j+1]);
             }
         }
-
-        // for(int j = 0; j < len; j++){
-        //     printf("%s %d\n", name[j], score[j]);
-        // }
-        
-        printf("Case #%d: \n", i + 1);
-        for(int j = 0; j < len; j++){
-            printf("%d\n", strcmp(search, name[j]));
-            printf("%s %s\n", search, name[j]);
-        }
     }
+    
+    for(i=0;i<testcase;i++){
+        printf("%ld %s\n",angka[i],plants[i]);
+    }
+    
     return 0;
 }
