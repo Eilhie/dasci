@@ -30,7 +30,7 @@ int main(){
     for(int i = 0; i < testcases; i++){
         fscanf(fp,"%ld#%[^\n]\n", &nums[i], temp);    
         int len = strlen(temp);
-        name[i] = malloc(100*sizeof(char));
+        name[i] = malloc(strlen(temp)*sizeof(char));
         strcpy(name[i], temp);
     }
     int len = testcases;
