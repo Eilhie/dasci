@@ -77,4 +77,5 @@ int binarySearch(int arr[], int x, int low, int high){
         else                        // x is on the left side
             return binarySearch(arr, x, low, mid - 1);
     }
+    return -1;
 }
