@@ -2,20 +2,27 @@
 #include <string.h>
 #include <stdlib.h>
 
-int binarySearch(long int arr[], long int x, int low, int high){
-    if (low > high)
-        return -1;
+void swap_str(char **x, char **y){
+    char *temp = *x;
+    *x = *y;
+    *y = temp;
+}
 
-    else{
-        int mid = (low + high) / 2;
-        if(x == arr[mid])
+int binary_search(char *list_of_words[], int size, char *target){
+    int bottom= 0;
+    int mid;
+    int top = size - 1;
+
+    while(bottom <= top){
+        mid = (bottom + top)/2;
+        if (strcmp(list_of_words[mid], target) == 0){
+            // printf("%s found at location %d.\n", target, mid+1);
             return mid;
-
-        else if(x > arr[mid])        // x is on the right side
-            return binarySearch(arr, x, mid + 1, high);
-        
-        else                        // x is on the left side
-            return binarySearch(arr, x, low, mid - 1);
+        } else if (strcmp(list_of_words[mid], target) > 0){
+            top = mid - 1;
+        } else if (strcmp(list_of_words[mid], target) < 0){
+            bottom = mid + 1;
+        }
     }
     return -1;
 }
@@ -27,25 +34,52 @@ int main(){
 
     int datacount;
     fscanf(fp, "%d\n", &datacount);
-    long int studentID[100];
-    char *studentName[100];
+    char *key[100];
+    char *actual[100];
     for(int i = 0; i < datacount; i++){
-        char SITemp[100], SNTemp[100];
-        fscanf(fp, "%ld %s\n", &studentID[i], SNTemp);
-        studentName[i] = malloc(strlen(SNTemp)*sizeof(char));
-        strcpy(studentName[i], SNTemp);
+        char KeyTemp[100], ActualTemp[100];
+        fscanf(fp, "%[^#]#%s\n", KeyTemp, ActualTemp);
+        key[i] = malloc(strlen(KeyTemp)*sizeof(char));
+        actual[i] = malloc(strlen(ActualTemp)*sizeof(char));
+        strcpy(key[i], KeyTemp);
+        strcpy(actual[i], ActualTemp);
+    }
+
+    for (int i = 0; i < datacount - 1; i++){
+        for (int j = 0; j < datacount - i - 1; j++){
+            if (strcmp(key[j], key[j + 1]) > 0){
+                swap_str(key + j, key + j + 1);
+                swap_str(actual + j, actual + j + 1);
+            }
+        }
     }
 
     int testcases;
     fscanf(fp, "%d\n", &testcases);
     for(int i = 0; i < testcases; i++){
-        long int NIM;
-        fscanf(fp, "%ld\n", &NIM);
-        int res = binarySearch(studentID, NIM, 0, datacount);
-        if(res < 0){
-            printf("Case #%d: N/A\n", i + 1);
-        } else printf("Case #%d: %s\n", i + 1, studentName[res]);
+        char string[200];
+        fscanf(fp, "%[^\n]\n", string);
+        char list[200][200];
+        char *token = strtok(string, " ");
+        int l = 0;
+        while(token!=NULL){
+            strcpy(list[l], token);
+            token = strtok(NULL, " ");
+            l++;
+        }
+        printf("Case #%d:\n", i + 1);
+        for(int j = 0; j < l; j++){
+            int result = binary_search(key, datacount, list[j]);
+            
+            if(result >= 0){
+                strcpy(list[j], actual[result]);
+            } 
+
+            if(j == l - 1) printf("%s\n", list[j]);
+            else printf("%s ", list[j]);
+        }
     }
+
     fclose(fp);
 
     return 0;
