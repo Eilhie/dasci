@@ -270,7 +270,7 @@ void MenuView(){
         printf("ID               : %s\n", MenuID[i]);
         printf("Name             : %s\n", MenuName[i]);
         printf("Status           : %s\n", MenuType[i]);
-        printf("Price            : %lld\n\n", MenuPrice[i]);
+        printf("Price            : %d\n\n", MenuPrice[i]);
     }
     printf("-------------------------------------\n > ");
     system("pause");
@@ -346,7 +346,7 @@ void MenuUpdate(){
             printf("ID               : %s\n", MenuID[i]);
             printf("Name             : %s\n", MenuName[i]);
             printf("Type             : %s\n", MenuType[i]);
-            printf("Price            : %lld\n\n", MenuPrice[i]);
+            printf("Price            : %d\n\n", MenuPrice[i]);
             printf("-------------------------------------\n");
             int run = 1;
             while(run){
