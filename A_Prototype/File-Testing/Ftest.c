@@ -2,44 +2,49 @@
 #include<string.h>
 #include<stdlib.h>
 
+void swap(char *x, char *y){
+    char temp = *x;
+    *x = *y;
+    *y = temp;
+} 
+
 int main(){    
     FILE *fp;
     fp = fopen("testdata.in","r");
-    int datacount;
-    fscanf(fp,"%d\n",&datacount);
-    char *sstr[100];
-    char *lstr[100];
-    char stemp[150], ltemp[150];
-    for(int i = 0; i < datacount; i++){
-        fscanf(fp,"%[^#]#%[^\n]\n", stemp, ltemp);
-        sstr[i] = malloc(strlen(stemp)*sizeof(char*));
-        strcpy(sstr[i], stemp);
-        lstr[i] = malloc(strlen(ltemp)*sizeof(char*));
-        strcpy(lstr[i], ltemp);
-    }
     int cases;
-    fscanf(fp,"%d\n",&cases);
+    fscanf(fp, "%d\n", &cases);
+
     for(int i = 0; i < cases; i++){
-        char string[150];
-        fscanf(fp, "%[^\n]\n", string);
-        char list[100][150];
-        char *token = strtok(string, " ");
-        int l = 0;
-        while(token!=NULL){
-            strcpy(list[l], token);
-            token = strtok(NULL, " ");
-            l++;
-        }
-        printf("Case #%d:\n", i + 1);
-        for(int j = 0; j < l; j++){
-            for(int k = 0; k < datacount; k++){
-                if(strcmp(list[j], sstr[k]) == 0){
-                    strcpy(list[j], lstr[k]);
+        char str[111];
+        int changes;
+        char search, new[30];
+        int changed[100] = {0};
+        int count[26] = {0};
+        fscanf(fp, "%s\n", str);
+        fscanf(fp, "%d\n", &changes);
+        for(int j = 0; j < changes; j++){
+            fscanf(fp, "%c %c\n", &search, &new[j]);
+            for(int k = 0; k < strlen(str); k++){
+                if((str[k] == search) && !changed[k]){
+                    str[k] = new[j];
+                    changed[k] = 1;
+                    count[k]++;
+                } else if(str[k] && !changed[k]){
+                    count[k]++;
                 }
             }
-            if(j == l - 1) printf("%s\n", list[j]);
-            else printf("%s ", list[j]);
         }
+        
+        int len = strlen(str);
+        for(int j = 0; j < len - 1; j++){
+            for(int k = 0; k < len - 1 -j; k++){
+                if(str[k] > str[k + 1]) swap(&str[k], &str[k + 1]);
+            }
+        }
+        for(int j = 0; j < len; j++){
+            printf("%c ", str[j]);
+        }
+        puts("");
     }
     fclose(fp);
     return 0;
