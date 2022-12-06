@@ -1,56 +1,46 @@
 #include<stdio.h>
 #include<string.h>
-#include<ctype.h>
 #include<stdlib.h>
 
-void swapNum(long int *num1,long int *num2)
-{
-    long long int tmpNum= *num1;
-    *num1= *num2;
-    *num2= tmpNum;
-}
-
-void swap(char **str,char **mystr){
-    char *temp = *str;
-    *str = *mystr;
-    *mystr = temp;
-
-}
-
-
-int main()
-{    
+int main(){    
     FILE *fp;
     fp = fopen("testdata.in","r");
-    int testcase;
-    fscanf(fp,"%d\n",&testcase);
-//    scanf("%d",&testcase);
-    long int angka[1010];
-    char *plants[1010];
-    char temp[1010];
-    int i;
-    for(i=0;i<testcase;i++){
-        fscanf(fp,"%ld#%[^\n]\n",&angka[i],temp);
-//        scanf("%ld#%[^\n]",&angka[i],temp);
-//        getchar();        
-        plants[i] = malloc(strlen(temp)*sizeof(char*));
-        strcpy(plants[i],temp);
+    int datacount;
+    fscanf(fp,"%d\n",&datacount);
+    char *sstr[100];
+    char *lstr[100];
+    char stemp[150], ltemp[150];
+    for(int i = 0; i < datacount; i++){
+        fscanf(fp,"%[^#]#%[^\n]\n", stemp, ltemp);
+        sstr[i] = malloc(strlen(stemp)*sizeof(char*));
+        strcpy(sstr[i], stemp);
+        lstr[i] = malloc(strlen(ltemp)*sizeof(char*));
+        strcpy(lstr[i], ltemp);
     }
-    fclose(fp);
-    int j;
-    int count = testcase;
-    for(i=0;i<count-1;i++){
-        for(j=0;j<count-i-1;j++){
-                if(strcmp(plants[j],plants[j+1])>0){
-                    swap(plants+j,plants+j+1);
-                    swapNum(&angka[j],&angka[j+1]);
+    int cases;
+    fscanf(fp,"%d\n",&cases);
+    for(int i = 0; i < cases; i++){
+        char string[150];
+        fscanf(fp, "%[^\n]\n", string);
+        char list[100][150];
+        char *token = strtok(string, " ");
+        int l = 0;
+        while(token!=NULL){
+            strcpy(list[l], token);
+            token = strtok(NULL, " ");
+            l++;
+        }
+        printf("Case #%d:\n", i + 1);
+        for(int j = 0; j < l; j++){
+            for(int k = 0; k < datacount; k++){
+                if(strcmp(list[j], sstr[k]) == 0){
+                    strcpy(list[j], lstr[k]);
+                }
             }
+            if(j == l - 1) printf("%s\n", list[j]);
+            else printf("%s ", list[j]);
         }
     }
-    
-    for(i=0;i<testcase;i++){
-        printf("%ld %s\n",angka[i],plants[i]);
-    }
-    
+    fclose(fp);
     return 0;
 }
