@@ -45,9 +45,17 @@ int main(){
         used[0] = 1;
         int j=0;
         for(int x=1; x<5; x++){
+            for(int j = 0; j < 25; j++){
+                printf("%d ", used[j]);
+            } puts("");
+            //printf("%d\n", j);
             while(j<25 && used[j]){
                 j++;
             }
+            //printf("%d\n", j);
+            for(int j = 0; j < 25; j++){
+                printf("%d ", used[j]);
+            } puts("");
             result[x]=list[j]-result[0];
             
             for(int i=0;i<x;i++){
@@ -59,13 +67,18 @@ int main(){
                     }
                 }
             }
-            
+            for(int j = 0; j < 25; j++){
+                printf("%d ", used[j]);
+            } puts("");
             for(int i=0;i<25;i++){
                 if(!used[i] && list[i]==(result[x]*2)){
                     used[i]=1;
                     break;
                 }
             }
+            for(int j = 0; j < 25; j++){
+                printf("%d ", used[j]);
+            } puts("");
         }
         
         printf("Case #%d:", m+1);
@@ -75,3 +88,4 @@ int main(){
         printf("\n");
     }
 }
+
