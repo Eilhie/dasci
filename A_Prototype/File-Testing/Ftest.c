@@ -1,40 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-int main(){  
+int main(){
+    FILE *file;
+    file = fopen("testdata.in", "r");
     int T;
-    FILE *file = fopen("testdata.in", "r");  
-    fscanf(file, "%d\n", &T);     
-    for(int i=0; i<T; i++){ 
-        int changed[26] = {0};   
-        char string[100];     
-        int N;         
-        fscanf(file, "%s\n", string);      
-        fscanf(file, "%d\n", &N);    
-        int len = strlen(string);        
-        for(int j=0; j<N; j++){                          
-            char from;            
-            char to;                         
-            fscanf(file, "%c %c\n", &from, &to);   
-            if(!changed[from-'A']){
-                changed[from-'A']=1;
-                for (int k = 0; k < len; k++){                                              
-                    if (string[k] == from){                         
-                        string[k] = to;
-                    }                 
-                } 
-            }
-        }             
-        int frequency[26] = {0};        
-        for (int j = 0; j < len; j++){                             
-            frequency[string[j] - 'A']++;            
-        }             
-        for (int j = 0; j < 26; j++){                            
-            if(frequency[j]){
-                printf("%c %d\n", 'A'+j, frequency[j]);
-            }          
-        }         
-    }     
-    return 0; 
+    fscanf(file, "%d\n", &T);
+    for(int i=0; i<T; i++){
+        int N;
+        fscanf(file, "%d\n", &N);
+        int list[100];
+        int total=0;
+        for(int j=0; j<N; j++){
+            fscanf(file, "%d\n", &list[j]);
+            total+=list[j];
+        }
+        int Area=total*4;
+        int Perimeter=N*4+(list[0]+list[N-1])*2;
+        for(int j=0; j<N-1; j++){
+            Perimeter=Perimeter+(abs(list[j]-list[j+1])*2);
+        }
+        printf("Case #%d: %d %d\n", i+1, Perimeter, Area);
+    }
 }
