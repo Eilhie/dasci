@@ -8,20 +8,17 @@ int main(){
     int testCases;
     scanf("%d", &testCases);
     for(int i = 0; i < testCases; i++){
-        char *s = (char *) malloc (sizeof(char) * (int) pow(10, 6)); 
+        char s[120000]; 
         scanf("%s", s);
         int alpha[26] = {0};
         int result = 0;
-        for(int i = 0; i < strlen(s); i++){
-            alpha[s[i] - 'a']++;
+        for(int j = 0; s[j] != '\0'; j++){
+            alpha[s[j] - 'a'] = 1;
         }
-        for(int i = 0; i < 26; i++){
-            if(alpha[i] > 0) result++;
+        for(int j = 0; j < 26; j++){
+            if(alpha[j] == 1) result++;
         }
-        if(result % 2 == 0)
-            printf("Case #%d: Yay\n", i + 1);
-        else 
-            printf("Case #%d: Ewwww\n", i + 1);
+        printf("Case #%d: %s\n", i + 1, (result%2 == 0)?"Yay":"Ewwww");
     }
 
     return 0;
