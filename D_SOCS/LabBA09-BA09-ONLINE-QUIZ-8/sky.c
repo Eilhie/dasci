@@ -14,8 +14,6 @@ void swapchar(char *x, char *y){
     *y = temp;
 }
 
-
-
 int main(){
     int size;
     scanf("%d", &size);
@@ -30,16 +28,13 @@ int main(){
     for(int i = 0, j = size - 1; i < j; i++, j--){
         swapstr(photo + i, photo + j);
     }
-    // for(int i = 0; i < size; i++){
-    //     printf("%s\n", photo[i]);
-    // }
+
     for(int k = 0; k < size; k++){
         for(int i = 0, j = size - 1; i < j; i++, j--){
             swapchar(&photo[k][i], &photo[k][j]);
         }
     }
     
-
     for(int i = 0; i < size; i++){
         printf("%s\n", photo[i]);
     }
