@@ -25,11 +25,11 @@ int main(){
     fscanf(fp, "%d\n", &testcases);
 
     long int nums[1000];
-    char *name[1000];
+    char name[1000][100];
     char temp[100];
     for(int i = 0; i < testcases; i++){
         fscanf(fp,"%ld#%[^\n]\n", &nums[i], temp);    
-        name[i] = malloc(strlen(temp)*sizeof(char));
+        //name[i] = malloc(strlen(temp)*sizeof(char));
         strcpy(name[i], temp);
     }
     int len = testcases;
