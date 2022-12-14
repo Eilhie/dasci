@@ -36,7 +36,10 @@ int main(){
     for (int i = 0; i < len - 1; i++){
         for (int j = 0; j < len - i - 1; j++){
             if (strcmp(name[j], name[j + 1]) > 0){
-                swap_str(name + j, name + j + 1);
+                //swap_str(name + j, name + j + 1);
+                strcpy(temp, name[j]);
+                strcpy(name[j + 1], name[j]);
+                strcpy(name[j], temp);
                 swap(&nums[j], &nums[j + 1]);
             }
         }
