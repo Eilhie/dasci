@@ -25,18 +25,21 @@ int main(){
     fscanf(fp, "%d\n", &testcases);
 
     long int nums[1000];
-    char *name[1000];
+    char name[1000][100];
     char temp[100];
     for(int i = 0; i < testcases; i++){
         fscanf(fp,"%ld#%[^\n]\n", &nums[i], temp);    
-        name[i] = malloc(strlen(temp)*sizeof(char));
+        //name[i] = malloc(strlen(temp)*sizeof(char));
         strcpy(name[i], temp);
     }
     int len = testcases;
     for (int i = 0; i < len - 1; i++){
         for (int j = 0; j < len - i - 1; j++){
             if (strcmp(name[j], name[j + 1]) > 0){
-                swap_str(name + j, name + j + 1);
+                //swap_str(name + j, name + j + 1);
+                strcpy(temp, name[j]);
+                strcpy(name[j], name[j + 1]);
+                strcpy(name[j + 1], temp);
                 swap(&nums[j], &nums[j + 1]);
             }
         }
