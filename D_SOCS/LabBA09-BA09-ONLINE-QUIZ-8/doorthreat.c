@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(){
 
@@ -8,10 +9,7 @@ int main(){
         int n, m;
         scanf("%d %d", &n, &m);
 
-        int rooms[n];
-        for(int j = 0; j < n; j++){
-            rooms[j] = 0;
-        }
+        int *rooms = (int*)calloc(n, sizeof(int));
 
         int pattern[m];
         for(int j = 0; j < m; j++){
