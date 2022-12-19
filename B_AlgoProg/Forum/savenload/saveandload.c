@@ -45,7 +45,6 @@ void save(){
     
 
     fclose(fp);
-    index++;
 }
 
 void load(){
