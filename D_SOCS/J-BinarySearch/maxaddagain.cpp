@@ -36,3 +36,4 @@ int main() {
         printf("Case #%d: %lld\n", i, maxIndex);
     }
 }
+
