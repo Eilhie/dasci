@@ -13,12 +13,12 @@ int main () {
    for( i=0 ; i < n - 1 ; i++ ) {
       scanf("%d",&a[i]);
    }
-    free(a);
+    
    printf("The numbers entered are: ");
    for( i=0 ; i < n ; i++ ) {
       printf("%d ",a[i]);
    }
    
-   
+   free(a);
    return(0);
 }
