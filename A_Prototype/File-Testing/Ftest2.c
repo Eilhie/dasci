@@ -14,41 +14,42 @@ void swap(long int *x, long int *y){
     *y = temp;
 }
 
-
-
 int main(){
 
     FILE *fp;
     fp = fopen("testdata.in", "r");
 
-    int testcases;
-    fscanf(fp, "%d\n", &testcases);
-
-    long int nums[1000];
-    char name[1000][100];
-    char temp[100];
-    for(int i = 0; i < testcases; i++){
-        fscanf(fp,"%ld#%[^\n]\n", &nums[i], temp);    
-        //name[i] = malloc(strlen(temp)*sizeof(char));
-        strcpy(name[i], temp);
+    char *name[100], *title[100];
+    long int view[100];
+    char ntemp[1010], ttemp[1010];
+    int i = 0;
+    while (!feof(fp)) {
+        fscanf(fp, "%[^#]#%[^#]#%ld\n", ttemp, ntemp, &view[i]);
+        name[i] = malloc(1010*sizeof(char));
+        strcpy(name[i], ntemp);
+        title[i] = malloc(1010*sizeof(char));
+        strcpy(title[i], ttemp);
+        // printf("%s %s %ld", title[i], name[i], view[i]);
+        i++;
     }
-    int len = testcases;
-    for (int i = 0; i < len - 1; i++){
-        for (int j = 0; j < len - i - 1; j++){
-            if (strcmp(name[j], name[j + 1]) > 0){
-                //swap_str(name + j, name + j + 1);
-                strcpy(temp, name[j]);
-                strcpy(name[j], name[j + 1]);
-                strcpy(name[j + 1], temp);
-                swap(&nums[j], &nums[j + 1]);
+    for (int j = 0; j < i; j++){
+        for (int k = 0; k < i - j - 1; k++){
+            if (view[k] < view[k + 1]){
+                swap_str(name + k, name + k + 1);
+                swap_str(title + k, title + k + 1);
+                swap(&view[k], &view[k + 1]);
+            } else if(view[k] == view[k + 1]){
+                swap_str(name + k, name + k + 1);
+                swap_str(title + k, title + k + 1);
             }
         }
     }
 
-
-    for(int i = 0; i < testcases; i++){
-        printf("%ld %s\n", nums[i], name[i]);
+    for(int d = 0; d < i; d++){
+        printf("%s by %s - %ld\n", title[d], name[d], view[d]);
     }
+    // puts("");
+    fclose(fp);
 
     return 0;
 }
