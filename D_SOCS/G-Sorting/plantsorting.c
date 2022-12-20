@@ -32,8 +32,7 @@ int main(){
         //name[i] = malloc(strlen(temp)*sizeof(char));
         strcpy(name[i], temp);
     }
-    int len = testcases
-    ;
+    int len = testcases;
     for (int i = 0; i < len - 1; i++){
         for (int j = 0; j < len - i - 1; j++){
             if (strcmp(name[j], name[j + 1]) > 0){
