@@ -1,34 +1,221 @@
-Decision Structure and Boolean Logic
+pancasila and anti corruption character
 
-Decision Structures 
-    descision structure memungkinkan program untuk berjalan sesuai dengan kondisi yang diberikan.
+pancasila dan Karakter anti korupsi
 
-    Types of decisions : 
-        If, single alternative
-        If then else, dual alternative
-        Case Structure, multiple alternative descisions 
+- apa itu pancasila?
+    Berdasarkan asal katanya, Pancasila terdiri atas dua suku kata, yaitu panca dan sila. 
+    Panca artinya lima dan sila artinya dasar. 
+    Pancasila adalah dasar filosofis resmi negara Indonesia yang terdiri dari lima prinsip. 
 
-    If Statement, akan menjalankan kumpulan statement ketika kondisi yang diberikan terpenuhi.
-    If then Else statement, akan menjalankan kumpulan statement dari salah satu kondisi terpenuhi.
-    Case Structure, memiliki percabangan yang ditentukan oleh value dari variable yang diekspresikan yang akan menentukan alur dari program.
+    Ketuhanan
+    kemanusiaan
+    persatuan
+    kerakyatan
+    keadilan
 
-    
-    Operators
-        Relational Operators :
-        digunakan untuk menentukan relasi antara kedua value, relational operator menggunakan simbol simbol seperti berikut :
-            >  Lebih dari
-            <  Kurang dari
-            >= Lebih besar sama dengan
-            <= Lebih kecil sama dengan
-            == Sebanding dengan
-            != Tidak sebanding dengan
+    Ketuhanan merujuk pada prinsip kepercayaan pada Tuhan yang maha esa.
+    Kemanusiaan merujuk pada prinsip kemanusiaan yang adil dan beradab.
+    Persatuan merujuk pada prinsip persatuan Indonesia.
+    Kerakyatan merujuk pada prinsip demokrasi yang dipimpin oleh kebijaksanaan dalam kebulatan tekad yang dihasilkan dari musyawarah antar 
+    wakil-wakil.
+    Keadilan merujuk pada prinsip keadilan sosial bagi seluruh rakyat Indonesia.
+
+    Semua kata-kata tersebut membentuk lima prinsip Pancasila yang menjadi dasar filosofis negara Indonesia.
+
+    Pancasila merupakan landasan filosofis yang menjadi dasar pemikiran dan arah gerak bangsa Indonesia dalam menyelenggarakan kehidupan 
+    bermasyarakat, berbangsa, dan bernegara. Lima prinsip dalam Pancasila yaitu:
+        1. Kepercayaan pada Tuhan yang maha esa, yang mengandung pengertian bahwa Indonesia adalah negara yang beragama, 
+            dan bahwa agama merupakan salah satu sumber nilai-nilai dasar yang menjadi dasar keberlangsungan hidup bermasyarakat, 
+            berbangsa, dan bernegara.
+
+        2. Kemanusiaan yang adil dan beradab, yang menekankan pentingnya memperjuangkan nilai-nilai moral dan etika dalam kehidupan bermasyarakat, 
+            berbangsa, dan bernegara.
+
+        3. Persatuan Indonesia, yang menekankan pentingnya membangun keberlangsungan hidup bersama dalam satu bangsa yang terdiri dari berbagai suku, 
+            agama, dan ras.
+
+        4. Demokrasi yang dipimpin oleh kebijaksanaan dalam kebulatan tekad yang dihasilkan dari musyawarah antar wakil-wakil, 
+            yang menekankan pentingnya pengambilan keputusan secara demokratis melalui proses musyawarah (konsultasi) antar wakil-wakil.
+
+        5. Keadilan sosial bagi seluruh rakyat Indonesia, yang menekankan pentingnya memperjuangkan keadilan sosial bagi seluruh rakyat Indonesia, 
+            tanpa memandang suku, agama, atau ras.
+
+    Pancasila merupakan dasar filosofis yang menjadi landasan dasar Negara Kesatuan Republik Indonesia (NKRI) dan merupakan sumber dari seluruh norma, 
+    peraturan, dan tata cara hidup bermasyarakat, berbangsa, dan bernegara di Indonesia.
+
+- apa itu karakter anti korupsi 
+    Korupsi adalah tindakan yang dilakukan oleh seseorang atau sekelompok orang dengan menggunakan kekuasaan atau posisi yang 
+    dimilikinya untuk memperoleh keuntungan pribadi atau keuntungan bagi orang lain, dengan cara yang tidak jujur, tidak adil, 
+    dan melanggar hukum.
+
+    Korupsi dapat terjadi di berbagai sektor, seperti sektor pemerintahan, sektor swasta, sektor keuangan, dan sektor lainnya. 
+    Korupsi dapat berupa tindakan yang dilakukan secara terang-terangan atau secara terselubung. Korupsi dapat berupa tindakan yang dilakukan 
+    oleh individu atau kelompok individu, dan dapat merugikan negara, masyarakat, atau individu lainnya.
+
+    Korupsi merupakan masalah yang sangat serius, karena dapat merusak tatanan kehidupan bermasyarakat, berbangsa, dan bernegara. 
+    Korupsi dapat menghambat pembangunan, menurunkan kualitas pelayanan publik, menurunkan kepercayaan masyarakat terhadap pemerintah, 
+    dan merusak citra negara di mata dunia. Oleh karena itu, perjuangan melawan korupsi merupakan kewajiban bersama yang harus dilakukan 
+    oleh semua pihak, termasuk pemerintah, masyarakat, dan sektor swasta.
+
+    Karakter anti korupsi adalah sikap dan tindakan seseorang atau sekelompok orang yang bertujuan untuk mencegah, menghentikan, dan 
+    memberantas tindakan korupsi. Karakter anti korupsi meliputi komitmen yang kuat untuk tidak melakukan tindakan korupsi, serta memiliki sikap dan tindakan yang menghargai integritas, kejujuran, dan transparansi.
+
+    Beberapa ciri karakter anti korupsi yang perlu dimiliki oleh seseorang atau sekelompok orang adalah:
+    1. Tidak melakukan tindakan korupsi, baik secara langsung maupun tidak langsung.
+    2. Menghargai integritas dan tidak merusak integritas orang lain.
+    3. Memiliki sikap dan tindakan yang jujur dan adil.
+    4. Menghargai transparansi dan tidak merusak transparansi.
+    5. Memiliki sikap dan tindakan yang bertanggung jawab terhadap tugas dan tanggung jawab yang diberikan.
+    6. Berani mengambil tindakan yang sesuai jika menemukan tindakan korupsi.
+
+    Memiliki karakter anti korupsi merupakan hal yang penting bagi setiap individu, karena karakter tersebut akan menjadi dasar untuk 
+    membangun kepercayaan dan kejujuran dalam bermasyarakat, berbangsa, dan bernegara. Karakter anti korupsi juga merupakan salah satu prinsip 
+    dasar dalam Pancasila, yaitu prinsip kemanusiaan yang adil dan beradab, yang menekankan pentingnya memperjuangkan nilai-nilai moral dan 
+    etika dalam kehidupan bermasyarakat, berbangsa, dan bernegara.
 
 
-        logical operators :
-        merupakan operator yang digunakan diantara kondisi untuk membuat ekspresi Boolean.
-        Logical Operator terdiri dari : 
-            AND - ketika kedua kondisi benar
-            OR - ketika setidaknya salah satu benar
-            NOT - kebalikan dari expresi yang diberikan
+    Beberapa sifat yang harus dimiliki seseorang agar dapat menghindari tindakan korupsi adalah:
+    Integritas
+    Integritas merupakan sifat yang sangat penting untuk menghindari tindakan korupsi. 
+    Seseorang yang memiliki integritas akan memiliki prinsip yang kuat dan tidak akan mudah terpengaruh oleh kepentingan pribadi atau 
+    kepentingan orang lain dalam mengambil keputusan atau tindakan.
 
-        
+    Kejujuran
+    Kejujuran merupakan sifat yang sangat penting untuk menghindari tindakan korupsi. 
+    Seseorang yang jujur akan selalu bersikap dan bertindak dengan sesuai dengan kebenaran, tidak akan menyembunyikan informasi atau 
+    melakukan tindakan yang tidak benar demi kepentingan pribadi atau kepentingan orang lain.
+
+    Kepedulian terhadap masyarakat
+    Seseorang yang memiliki kepedulian terhadap masyarakat akan lebih peka terhadap kebutuhan masyarakat dan 
+    tidak akan mudah terpengaruh oleh kepentingan pribadi atau kepentingan orang lain dalam mengambil keputusan atau tindakan yang 
+    berkaitan dengan masyarakat.
+
+    Bertanggung jawab
+    Seseorang yang bertanggung jawab akan selalu mempertimbangkan dampak dari tindakan yang akan diambil, 
+    baik bagi dirinya sendiri maupun bagi orang lain. Seseorang yang bertanggung jawab juga akan memahami bahwa setiap tindakan yang 
+    dilakukan memiliki konsekuensi yang harus ditanggung.
+
+    Transparansi
+    Seseorang yang memiliki sifat transparansi akan selalu memperlihatkan sikap dan tindakan yang terbuka dan tidak menyembunyikan informasi 
+    yang dianggap penting bagi orang lain. Transparansi merupakan sifat yang penting untuk menghindari tindakan korupsi, 
+    karena dengan transparansi maka tindakan yang dilakukan akan lebih mudah diketahui oleh orang lain sehingga tidak akan 
+    mudah terjadi tindakan yang merugikan orang lain.
+
+- bentuk bentuk tindakan korupsi 
+    Tindakan korupsi merujuk pada tindakan yang dilakukan oleh seseorang atau sekelompok orang dengan tujuan memperoleh keuntungan pribadi 
+    atau kelompok dengan cara melakukan penyalahgunaan wewenang atau menyalahgunakan posisi atau jabatan yang ditugaskan kepadanya. 
+    Beberapa tindakan korupsi yang sering terjadi di masyarakat, di antaranya adalah:
+
+    Penyuapan: memberikan uang atau barang kepada seseorang dengan tujuan untuk mempengaruhi keputusan atau tindakan yang akan dilakukan 
+    oleh orang tersebut.
+
+    Penggelapan: menyembunyikan atau menyalahgunakan dana atau sumberdaya yang dimiliki oleh suatu organisasi atau perusahaan dengan 
+    tujuan untuk memperoleh keuntungan pribadi.
+
+    Perbuatan tidak menyenangkan: memberikan tekanan atau ancaman kepada seseorang untuk mempengaruhi keputusan atau tindakan yang akan 
+    dilakukan oleh orang tersebut.
+
+    Pencucian uang: menyembunyikan asal-usul atau sumber dari uang yang didapat dengan cara tidak sah dengan tujuan untuk mengelabui pihak 
+    yang berwenang.
+
+    Nepotisme: memberikan keuntungan atau kemudahan kepada saudara atau orang dekat dengan menyalahgunakan wewenang atau posisi yang dimiliki.
+
+    Semua tindakan korupsi merupakan tindakan yang tidak etis dan tidak dapat diterima dalam masyarakat. 
+    Korupsi juga merupakan tindakan yang melanggar hukum dan dapat dihukum sesuai dengan peraturan yang berlaku di negara tersebut.
+
+- apakah mahasiswa dapat melakukan korupsi
+    bisa
+    Beberapa tindakan yang termasuk korupsi bagi mahasiswa di antaranya adalah:
+
+    Menyuap dosen atau pegawai universitas untuk mendapatkan nilai yang lebih baik dalam ujian atau tugas.
+
+    Menjual atau membeli tugas atau ujian dari atau kepada orang lain.
+
+    Memalsukan dokumen atau transkrip nilai untuk memperoleh keuntungan pribadi atau kelompok.
+
+    Menyalahgunakan dana atau sumberdaya universitas untuk kepentingan pribadi atau kelompok.
+
+    Menyuap orang lain untuk mendapatkan keuntungan pribadi atau kelompok dalam mengambil keputusan atau membuat kebijakan.
+
+    Menjual barang atau jasa yang ilegal atau tidak sah di universitas.
+
+    Sebagai mahasiswa, kita harus menghindari tindakan-tindakan tersebut dan bersikap jujur serta bertanggung jawab terhadap tugas 
+    yang diberikan kepada kita. Korupsi merugikan banyak pihak dan tidak memberikan manfaat apapun bagi masyarakat, sehingga kita harus 
+    memahami bahwa korupsi bukanlah tindakan yang dapat diterima.
+
+- hubungan antara pancasila dan karakter anti Korupsi
+
+    Pancasila adalah dasar filosofis resmi negara Indonesia. Pancasila terdiri dari lima prinsip: 
+    kepercayaan pada Tuhan yang maha esa, kemanusiaan yang adil dan beradab, persatuan Indonesia, 
+    demokrasi yang dipimpin oleh kebijaksanaan dalam kebulatan tekad yang dihasilkan dari musyawarah antar wakil-wakil, 
+    dan keadilan sosial bagi seluruh rakyat Indonesia.
+
+    Salah satu nilai inti dari Pancasila adalah prinsip "kemanusiaan yang adil dan beradab", 
+    yang menekankan pentingnya memperjuangkan nilai-nilai moral dan etika dalam semua aspek kehidupan, 
+    termasuk dalam perjuangan melawan korupsi.
+
+    Di Indonesia, perjuangan melawan korupsi merupakan prioritas utama dan tercermin dalam berbagai undang-undang dan regulasi, 
+    seperti Undang-Undang Anti Korupsi dan Kode Etik untuk Pejabat Publik. Undang-undang dan regulasi ini memberikan kerangka untuk mencegah, 
+    mendeteksi, dan memberikan sanksi terhadap korupsi, dan bertujuan untuk meningkatkan integritas dan transparansi di sektor publik.
+
+    Selain langkah hukum, promosi budaya etika yang kuat dan nilai-nilai, seperti yang tercermin dalam Pancasila, 
+    juga dapat memainkan peran penting dalam perjuangan melawan korupsi. Dengan menumbuhkan budaya kejujuran, akuntabilitas, dan integritas, 
+    individu dan organisasi dapat membantu menciptakan masyarakat yang lebih tahan terhadap korupsi dan lebih committed untuk memperjuangkan 
+    hukum yang berlaku.
+
+- undang undang anti korupsi
+    Di Indonesia, undang-undang yang mengatur tentang perjuangan melawan korupsi adalah Undang-Undang Nomor 20 Tahun 2001 tentang Pemberantasan 
+    Tindak Pidana Korupsi (UU PTPK). UU PTPK ini mengatur tentang pencegahan, penegakan hukum, dan penyelesaian tindak pidana korupsi, serta 
+    memberikan landasan hukum bagi penyelenggaraan kegiatan pemberantasan tindak pidana korupsi.
+
+    Selain UU PTPK, terdapat juga beberapa undang-undang lain yang terkait dengan perjuangan melawan korupsi, seperti:
+
+    Undang-Undang Nomor 31 Tahun 1999 tentang Pemberantasan Tindak Pidana Korupsi (UU PTPK).
+    Undang-Undang Nomor 8 Tahun 2010 tentang Pencegahan dan Pemberantasan Tindak Pidana Pencucian Uang (UU PPPPU).
+    Undang-Undang Nomor 13 Tahun 2006 tentang Pengesahan Convention Against The United Nations Against Convention Against Against Convention Against The United Nations Convention against Corruption (UNCAC).
+    Undang-Undang Nomor 17 Tahun 2010 tentang Kejaksaan Republik Indonesia.
+    Undang-Undang Nomor 30 Tahun 2002 tentang Komisi Pemberantasan Tindak Pidana Korupsi (KPK).
+    Undang-undang-undang tersebut merupakan landasan hukum yang memberikan dasar bagi pemberantasan tindak pidana korupsi di Indonesia.
+
+- mengapa korupsi harus diberantas
+    Tindakan korupsi merupakan suatu kejahatan yang merugikan banyak pihak, terutama masyarakat. Oleh karena itu, 
+    korupsi harus diberantas agar tidak merusak tatanan kehidupan bermasyarakat, berbangsa, dan bernegara. 
+    Berikut ini beberapa alasan mengapa korupsi harus diberantas:
+
+    Korupsi merusak kepercayaan masyarakat terhadap pemerintah
+    Korupsi dapat menurunkan kepercayaan masyarakat terhadap pemerintah, karena tindakan korupsi dapat merugikan masyarakat dan 
+    menguntungkan segelintir orang saja. Pemberantasan korupsi yang efektif dapat meningkatkan kepercayaan masyarakat terhadap pemerintah 
+    dan menunjukkan bahwa pemerintah serius dalam memperjuangkan keadilan dan keberlangsungan hidup bersama.
+
+    Korupsi merusak pembangunan
+    Korupsi dapat menghambat pembangunan, karena dana yang seharusnya digunakan untuk pembangunan bisa saja disalahgunakan oleh 
+    segelintir orang untuk kepentingan pribadi. Pemberantasan korupsi yang efektif dapat memastikan bahwa dana yang disediakan 
+    untuk pembangunan benar-benar digunakan untuk tujuan yang seharusnya, sehingga dapat mempercepat proses pembangunan.
+
+    Korupsi merusak kualitas pelayanan publik
+    Korupsi dapat menurunkan kualitas pelayanan publik, karena dana yang seharusnya digunakan untuk pelayanan publik bisa saja 
+    disalahgunakan oleh segelintir orang untuk kepentingan pribadi. Pemberantasan korupsi yang efektif dapat memastikan bahwa dana 
+    yang seharusnya digunakan untuk kepentingan publik menjadi untuk kepentingan pribadi.
+
+- contoh kasus pemberantasan korupsi    
+    Korupsi di Indonesia sudah sangat mengkhawatirkan dan berdampak buruk luar biasa pada
+    hampir seluruh sektor kehidupan. Dilain pihak upaya pemberantasan korupsi yang terus menerus
+    dilakukan masih belum menunjukkan hasil yang optimal. Angka Indeks Persepsi Korupsi (IPK)
+    Indonesia tahun 2019 masih 40 dan berada pada peringkat 85 dari 180 negara yang disurvei. Di
+    Kawasan ASEAN Indonesia berada di peringkat 4 di bawah Singapura (IPK = 85), Brunei
+    Darussalam (IPK = 60), dan Malaysia (IPK = 55). Data IPK ini menunjukkan bahwa posisi
+    Indonesia masih belum membaik secara signifikan. Korupsi di berbagai sektor dan dalam berbagai
+    tingkatan masih tetap saja terjadi. Korupsi seolah-olah sudah dianggap menjadi bagian dari
+    kehidupan kita yang dianggap biasa. Jika kondisi ini tetap kita biarkan maka cepat atau lambat
+    korupsi akan menghancurkan negeri ini. 
+
+    Berikut ini adalah beberapa contoh studi kasus karakter anti korupsi:
+
+    Pemberantasan korupsi di Kementerian Pertanian
+    Pada tahun 2018, terjadi skandal korupsi di Kementerian Pertanian yang terkait dengan pengadaan barang dan jasa. 
+    Seorang pejabat tinggi di kementerian tersebut diduga telah meminta suap dari perusahaan yang mengajukan penawaran dalam proses pengadaan 
+    barang dan jasa. Pejabat tersebut kemudian ditangkap dan dijerat dengan tuduhan korupsi.
+
+    Dalam kasus ini, pejabat yang tidak memiliki karakter anti korupsi terbukti tidak mampu menghindari tindakan korupsi, dan 
+    akhirnya terjerat dalam skandal tersebut. Sebaliknya, pejabat yang memiliki karakter anti korupsi akan lebih peka terhadap tindakan korupsi 
+    dan akan lebih berhati-hati dalam mengambil keputusan atau tindakan yang berpotensi merugikan orang lain.
