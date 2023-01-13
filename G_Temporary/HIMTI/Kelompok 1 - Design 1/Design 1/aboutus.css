@@ -1,0 +1,21 @@
+.badan {
+    width: 80%;
+}
+
+.flex-container {
+    padding: 100px 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-item-left {
+    align-content: right;
+    flex: 50%;
+}
+
+.flex-item-right {
+    flex: 50%;
+    color: white;
+}
+
