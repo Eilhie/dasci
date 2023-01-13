@@ -1,0 +1,11 @@
+! ! ! Disclaimer this note for INTRODUCTION TO DATA SCIENCE ! ! !
+! ! ! Note starting from Session 7 ! ! !
+
+- mean 
+    np.mean(data) 
+    np.nanmean(data) // ignoring nan values
+- median
+    np.median(data)
+- mode
+    from scipy import stats
+    stats.mode(data)
