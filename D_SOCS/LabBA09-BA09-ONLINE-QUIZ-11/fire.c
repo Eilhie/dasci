@@ -1,29 +1,48 @@
-#include <stdio.h>
-
-int main(){
-    int size = 3;
-    char map[3][5] = {"###", "###", "F##"};
-    int x, y;
-    for(int i = 0; i < size; i++){
-        for(int j = 0; j < size; j++){
-            if(map[i][j] == 'F') {
-                x = i;
-                y = j;
+#include<stdio.h>
+int main()
+{
+	FILE *data;
+	data = fopen("testdata.in","r");
+    int Case;
+    int area, time;
+    fscanf(data,"%d",&Case);
+    for(int i=1;i<=Case;i++)
+    {
+        fscanf(data,"%d %d",&area,&time);
+        fscanf(data,"\n");
+        char grass;
+        int x,y;
+        for(int j=0;j<area;j++)
+        {
+            for(int k=0;k<area;k++)
+            {
+                fscanf(data,"%c",&grass);
+                if(grass=='F')
+                {
+                    x = k; 
+                    y = j; 
+                }
             }
-            printf("%c", map[i][j]);
+            fscanf(data,"\n");
         }
-        puts("");
-    }
+        printf("Case #%d:\n",i);
+        for(int j=0;j<area;j++)
+        {
+            for(int k=0;k<area;k++)
+            {
+                if(k<x+time && k>x-time && j<y+time && j>y-time)
+                {
+                    printf("F");
+                }
 
-    printf("\n%d %d\n", x, y);
+                else printf("#");
 
-    for(int i = 0; i < size; i++){
-        for(int j = 0; j < size; j++){
-            
-            printf("%c", map[i][j]);
+            }
+            printf("\n");
         }
-        puts("");
+        printf("\n");
     }
-
+    
+    fclose(data);
     return 0;
 }
