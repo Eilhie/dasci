@@ -1,0 +1,31 @@
+Miner's Guild, 
+
+Miner's Guild is the place where miner gather to sell mining products and also explore the mines that manage by the guild. When there's a new mine, the guild mapper will map the layout the mining area from the entry point to the abundant safe mining place, when the map finish they will give the layout file to admin for the step which to find the minimum step required from entry to mining point. you as a programmer are required to make an application to manage the list of maps that store in *.dig file and process it.
+
+First the menu will be like this
+
+1. Show Discovered map list 
+2. Discover new map 
+3. Exit & Save Progress
+
+when admin choose : 
+Menu 1 : if it the new application, show info that there's no map discovered yet, else show all the map list with details such as map file name, the minimum step, and the possible path count .
+then give another menu to sort it by the minimum step or possible path with asc or desc criteria.
+
+Menu 2 : in this step, admin will be asked the file name, make sure it only accept *.dig file, and not discovered *.dig file ( no same name file in the list), give error message if the dig file not found,
+if it's the dig file and a new one... show the map 
+# is wall boundry , 0 is the entry point , X is the safe mining place.
+the step cannot be moved diagonally, only up,down,left, and right movement.
+if there's more than one minimum step , count it as number of possible path. 
+e.g : in file mine1-1.dig 
+the minimum step is 9 and possible minimum path is 1
+e.g : in file mine1-0.dig 
+the minimum step is 5 and possible minimum path is 2
+
+Menu 3 : you will save the progression of discovery, so the admin will continue from the last progression..
+
+Notes : 
+->give another test case using your own map file min. 3 files with rules the map width will always 7 with outer wall boundry, the lenght can be N size, and only 1 entry and 1 safe place permitted on map.
+-> assumption can be made as long as the requirement satisfied.
+-> use recursive method to find the shortest path. 
+-> use proper naming for file.
