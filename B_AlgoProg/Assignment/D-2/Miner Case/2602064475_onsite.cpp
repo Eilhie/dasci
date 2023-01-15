@@ -108,8 +108,7 @@ void bubleSortMs(mapList list[], int size, int order){
             }
 
         }
-    } 
-    
+    }    
 }
 
 void bubleSortMpp(mapList list[], int size, int order){

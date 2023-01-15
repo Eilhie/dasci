@@ -1,0 +1,25 @@
+Create a group with max 3 ppl , 
+
+Create your own project application using your own idea,
+
+The application should be useful and can be used in daily process. 
+The application requirement are :
+-> Read and write File, file requirement is having minimum 5 attributes for one file, preferable using struct to store data. // done
+-> There should be 2 or more file application in different usage, e.g list student.txt and student score history.txt and so on. // done
+-> Sorting, can be sorted using 3 different of data type, and could be ascending or descending. // done
+-> searching, two type searching using exact key , and pick one option: 
+1. contains the keyword if using string key search , e.g  (preferable)
+list data :
+anderson , amelia, derian , georion . 
+ex 1 ,<contains key> : ri , show derian , georion
+ex 2 ,<starts key> : a, show : anderson , amelia
+ex 3 ,<ends key> : an, show : derian 
+2. filter < and > keyword if using number key search, e.g 
+list data : 
+10,30,20,40,70,60,50 
+ex 1, < more than key> : 45 , show : 50, 60 ,70 
+ex 1, < less than key> : 45 , show : 10, 20 ,30 ,40
+-> Logic, use proper kind of validation and at least have string validation and number validation
+have 2 process logic, and one of them should applied recursive process method. 
+
+This case will be need to be presented for the usage and the feature have been made in the apps.
