@@ -30,5 +30,4 @@ int main(){
 		eleven(n);
 		
 	}
-	
 }
