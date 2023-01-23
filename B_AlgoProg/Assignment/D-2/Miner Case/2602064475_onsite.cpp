@@ -11,7 +11,7 @@ struct mapList{
 void readFile(mapList list[], int& size);
 int filecheck(const char *filename);
 void printAllMapInfo(mapList list[], int &size);
-// void bubleSortMs(mapList list[], int size);
+void bubleSortMs(mapList list[], int size);
 
 void viewMapList(mapList list[], int size);
 void discoverNewMap(mapList list[], int &size);
