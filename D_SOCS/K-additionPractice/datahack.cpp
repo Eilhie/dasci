@@ -22,10 +22,10 @@ void swapverti(employee *a, employee *b){
 }
 
 void swaphori(employee *a){
-    int temp = a->sal1;
-    a->sal1 = a->sal2;
-    a->sal2 = a->sal3;
-    a->sal3 = temp;
+    int temp = a->sal3;
+    a->sal3 = a->sal2;
+    a->sal2 = a->sal1;
+    a->sal1 = temp;
 }
 
 void hackfix(int order, int start, int end, employee emp[]){
@@ -37,7 +37,6 @@ void hackfix(int order, int start, int end, employee emp[]){
     } else if(order == 2){
         for(int i = start; i <= end; i++){
             swaphori(&emp[i]);
-            
         }
     }
 }
@@ -53,14 +52,12 @@ int main(){
         for(int j = 0; j < amountofdatas; j++){
             scanf("%s %d %d %d", emp[j].name, &emp[j].sal1, &emp[j].sal2, &emp[j].sal3); getchar();
         }
+        int changes[amountofchanges][3];
         for(int k = 0; k < amountofchanges; k++){
-            int order, start, end;
-            scanf("%d %d %d", &order, &start, &end); getchar();
-            hackfix(order, start - 1, end - 1, emp);
-            // for(int k = 0; k < amountofdatas; k++){
-            //     printf("%s %d %d %d\n", emp[k].name, emp[k].sal1 , emp[k].sal2 ,emp[k].sal3);
-            // }
-            // puts("");
+            scanf("%d %d %d", &changes[k][0], &changes[k][1], &changes[k][2]); getchar();          
+        }
+        for(int k = amountofchanges - 1; k >= 0; k--){
+            hackfix(changes[k][0], changes[k][1] - 1, changes[k][2] - 1, emp);
         }
         printf("Case #%d:\n", i);
         for(int k = 0; k < amountofdatas; k++){
