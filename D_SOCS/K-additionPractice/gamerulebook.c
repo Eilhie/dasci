@@ -1,23 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    FILE *input_file = fopen("testdata.in", "r");
+    FILE *fp = fopen("testdata.in", "r");
     int n, m, k;
-    fscanf(input_file, "%d %d", &n, &m);
-    int current_page = 0;
-    char line[51];
-    for (int i = 0; i < m; i++) {
-        fscanf(input_file, "%s", line);
-        if (line[0] == '#') {
-            current_page++;
-            if (current_page == k) {
-                break;
-            }
-        } else if (current_page == k) {
-            printf("%s\n", line);
-        }
+    fscanf(fp, "%d %d", &n, &m); fgetc(fp);
+    char line[n][100000];
+    for (int i = 0; i < n; i++) {
+        fscanf(fp, "%[^#]#", line[i]); fgetc(fp);
     }
-    fscanf(input_file, "%d", &k);
-    fclose(input_file);
+    fscanf(fp, "%d", &k); fgetc(fp);
+    fclose(fp);
+    printf("%s", line[k-1]);
+    
     return 0;
 }
+

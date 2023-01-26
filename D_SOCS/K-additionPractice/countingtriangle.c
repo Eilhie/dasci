@@ -1,40 +1,39 @@
 #include <stdio.h>
-#include <math.h>
 
 int main() {
-    int t;
-    scanf("%d", &t);
-    for (int cas = 1; cas <= t; cas++) {
-        int n, a[105], acute = 0, right = 0, obtuse = 0;
+    int T;
+    scanf("%d", &T);
+
+    for (int t = 1; t <= T; t++) {
+        int n;
         scanf("%d", &n);
+        int sticks[n];
         for (int i = 0; i < n; i++) {
-            scanf("%d", &a[i]);
+            scanf("%d", &sticks[i]);
         }
+
+        int acute = 0, right = 0, obtuse = 0;
         for (int i = 0; i < n; i++) {
-            for (int j = i+1; j < n; j++) {
-                for (int k = j+1; k < n; k++) {
-                    int max = a[i], min1 = a[j], min2 = a[k];
-                    if (a[j] > max) {
-                        max = a[j];
-                        min1 = a[i];
-                        min2 = a[k];
-                    }
-                    if (a[k] > max) {
-                        max = a[k];
-                        min1 = a[i];
-                        min2 = a[j];
-                    }
-                    if (min1 + min2 <= max) {
-                        obtuse++;
-                    } else if (pow(min1, 2) + pow(min2, 2) == pow(max, 2)) {
-                        right++;
-                    } else {
-                        acute++;
+            for (int j = i + 1; j < n; j++) {
+                for (int k = j + 1; k < n; k++) {
+                    // check if the combination of sticks forms a triangle
+                    if (sticks[i] + sticks[j] > sticks[k] && sticks[j] + sticks[k] > sticks[i] && sticks[k] + sticks[i] > sticks[j]) {
+                        // check if the triangle is acute, right, or obtuse
+                        if ((sticks[i] * sticks[i] + sticks[j] * sticks[j]) > sticks[k] * sticks[k]) {
+                            acute++;
+                        }
+                        else if ((sticks[i] * sticks[i] + sticks[j] * sticks[j]) == sticks[k] * sticks[k]) {
+                            right++;
+                        }
+                        else if ((sticks[i] * sticks[i] + sticks[j] * sticks[j]) < sticks[k] * sticks[k]) {
+                            obtuse++;
+                        }
                     }
                 }
             }
         }
-        printf("Case #%d: %d %d %d\n", cas, acute, right, obtuse);
+        // output the results for this test case
+        printf("Case #%d: %d %d %d\n", t, acute, right, obtuse);
     }
     return 0;
 }

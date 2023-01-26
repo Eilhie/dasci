@@ -19,21 +19,16 @@ int main(){
     for(int i = 1; i <= tc; i++){
         int x,y;
         fscanf(fp, "%d %d\n", &y, &x);
-        int data[y][x];
-        for(int j = 0; j < y; j++){
-            for(int k = 0; k < x; k++)
-                fscanf(fp, "%d", &data[j][k]);
-        }
         int find[y*x];
-        int index = 0;
-        for(int j = 0; j < y; j++){
-            for(int k = 0; k < x; k++){
-                find[index] = data[j][k];
-                index++;
-            }
+        for(int j = 0; j < y*x; j++){
+            fscanf(fp, "%d", &find[j]);
         }
+        
         bublesort(find, x*y);
-        printf("Case #%d: %d\n", i, find[(x*y) / 2]);
+        if(x*y % 2 == 0)
+            printf("Case #%d: %d\n", i, (find[((x*y) / 2)] + find[((x*y) / 2) + 1]) / 2);
+        else
+            printf("Case #%d: %d\n", i, (find[((x*y) / 2)]));
     }
     
 }

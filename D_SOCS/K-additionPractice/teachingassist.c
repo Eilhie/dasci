@@ -28,10 +28,8 @@ int main(int argc, char **argv) {
             scanf("%s %d", students[i].name, &students[i].group);
         }
 
-        // Print out the groups
         printf("Case #%d:\n", testCase);
-        for (i = 1; i <= MAX_GROUP_NUMBER; i++) {
-            // Count how many students are in the current group
+        for (i = 1; i <= 201; i++) {
             int count = 0;
             for (j = 0; j < n; j++) {
                 if (students[j].group == i) {
@@ -39,7 +37,6 @@ int main(int argc, char **argv) {
                 }
             }
 
-            // If there are any students in the current group, print them out
             if (count > 0) {
                 printf("Group %d(%d):\n", i, count);
                 for (j = 0; j < n; j++) {
