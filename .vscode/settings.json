@@ -18,7 +18,8 @@
         "deque": "cpp",
         "unordered_map": "cpp",
         "unordered_set": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "ALDENBANGSAT.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
