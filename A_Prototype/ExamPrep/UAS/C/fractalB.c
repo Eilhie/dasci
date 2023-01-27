@@ -14,11 +14,11 @@
 int main(){
     int x;
     scanf("%d", &x);
-    unsigned long long int fractal[100000] = {0, 1 ,4 , 11};
+    unsigned long long int fractal[100000] = {0, 1 ,3 , 7};
     if(x < 4) printf("%llu\n", fractal[x]);
     else{
         for(int i = 4; i <= x; i++){
-            fractal[i] = ((fractal[i - 1] + fractal[i - 1] + i) % 1000000000);
+            fractal[i] = ((fractal[i - 1] + fractal[i - 2] + i));
         }
         printf("%llu\n", fractal[x]);
     }
