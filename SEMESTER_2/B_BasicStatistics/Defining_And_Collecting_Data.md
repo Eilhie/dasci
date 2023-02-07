@@ -2,9 +2,9 @@
 
 Numerical Variables: These are variables that represent a measurable quantity. They can be either discrete or continuous.
     
-    1. Discrete Variables: These are variables that can only take on a specific set of values, such as integers. Examples include number of siblings, number of pets, etc.
+1. Discrete Variables: These are variables that can only take on a specific set of values, such as integers. Examples include number of siblings, number of pets, etc.
 
-    2. Continuous Variables: These are variables that can take on any value within a specified range. Examples include height, weight, income, etc.
+2. Continuous Variables: These are variables that can take on any value within a specified range. Examples include height, weight, income, etc.
 
 Categorical Variables: These are variables that represent categories or groups. They can be nominal or ordinal.
 
