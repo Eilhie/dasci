@@ -26,41 +26,37 @@ For example, if the population is all the students in a college, a sample of the
 
 probability sampling, method of selecting a sample from a population where each object has a known and non-zero probabilities.
 
-    Simple random sampling - In this method, each individual or object in the population has an equal chance of being selected for the sample.
+1. Simple random sampling - In this method, each individual or object in the population has an equal chance of being selected for the sample.
 
-    Stratified random sampling - In this method, the population is divided into groups (or strata) based on certain characteristics, and then a random sample is selected from each stratum.
+2. Stratified random sampling - In this method, the population is divided into groups (or strata) based on certain characteristics, and then a random sample is selected from each stratum.
 
-    Cluster sampling - In this method, the population is divided into clusters, and then a sample of clusters is selected, and all individuals or objects within the selected clusters are included in the sample.
+3. Cluster sampling - In this method, the population is divided into clusters, and then a sample of clusters is selected, and all individuals or objects within the selected clusters are included in the sample.
 
-    Systematic sampling - In this method, every kth individual or object is selected from a list of all the individuals or objects in the population.
+4. Systematic sampling - In this method, every kth individual or object is selected from a list of all the individuals or objects in the population.
 
 
 nonprobability sampling, method of selecting a sample from a population where object are not selected randomly and not knowing their probabilities of selection.
 
-    Convenience sampling - In this method, the sample is selected based on the convenience of the researcher, such as selecting participants who are available and willing to participate.
+1. Convenience sampling - In this method, the sample is selected based on the convenience of the researcher, such as selecting participants who are available and willing to participate.
 
-    Judgment sampling - In this method, the sample is selected by own personal judgment.
+2. Judgment sampling - In this method, the sample is selected by own personal judgment.
 
 # Type of Survey Error
 1. Coverage error occurs when the population being studied is not accurately defined or when the sample is not drawn from the population of interest. This type of error can have a significant impact on the results of a survey, as it can lead to an overestimate or underestimate of the characteristics of the population.
 
-```
-coverage error can result in selection bias. Selection bias occurs when the sample selected for the survey is not representative of the population being studied. This can result in an overestimate or underestimate of the characteristics of the population, leading to biased results.
-```
+    coverage error can result in selection bias. Selection bias occurs when the sample selected for the survey is not representative of the population being studied. This can result in an overestimate or underestimate of the characteristics of the population, leading to biased results.
+
 
 2. Non-response error occurs when a portion of the sample does not respond to the survey, resulting in a biased sample. This type of error can have a significant impact on the results of a survey, as it can lead to an overestimate or underestimate of the characteristics of the population.
 
-```
-Non-response bias occurs when the characteristics of the non-respondents (those who did not participate in the survey) are different from the characteristics of the respondents (those who did participate in the survey). This can result in a biased sample, leading to an overestimate or underestimate of the characteristics of the population.
-```
+    Non-response bias occurs when the characteristics of the non-respondents (those who did not participate in the survey) are different from the characteristics of the respondents (those who did participate in the survey). This can result in a biased sample, leading to an overestimate or underestimate of the characteristics of the population.
+
 
 3. Sampling error refers to the difference between the results obtained from a sample and the results that would have been obtained if the entire population had been studied. This error arises due to the fact that only a portion of the population is studied in a survey, rather than the entire population.
 
-```
-The margin of error is a measure of the sampling error in a survey. It is not the same as the sampling error itself, but it is a result of the sampling error.
+    The margin of error is a measure of the sampling error in a survey. It is not the same as the sampling error itself, but it is a result of the sampling error.
 
-The margin of error represents the range of values that the true population parameter is likely to lie within, given a certain level of confidence. It is calculated based on the size of the sample, the variability of the population, and the level of confidence desired.
-```
+    The margin of error represents the range of values that the true population parameter is likely to lie within, given a certain level of confidence. It is calculated based on the size of the sample, the variability of the population, and the level of confidence desired.
 
 4. Measurement error refers to the error that is introduced into a survey as a result of the measurement process. This type of error can arise from a variety of sources, including inaccurate or inconsistent measurement tools, incorrect data recording or coding, and human error.
 
