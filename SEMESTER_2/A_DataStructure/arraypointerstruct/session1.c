@@ -8,7 +8,7 @@ int main(){
     int flag = 0;
     for(int j = 0; j < sizeof(arr)/sizeof(int); j++){
 
-        if(arr[j] == x){ printf("ketemu, %d\n", j + 1); flag = 1; break;}
+        if(arr[j] == x){printf("ketemu, %d\n", j + 1); flag = 1; break;}
 
     }
     if(flag == 0) printf("ga ketemu\n");
