@@ -33,12 +33,14 @@ void pushHead(int data) {
 	}
 }
 
+
 void printList() {
 	
 	while (head != NULL) {
 		printf("%d ->", head->data);
 		head = head->next;
 	}
+	puts("");
 }
 
 int main() {
