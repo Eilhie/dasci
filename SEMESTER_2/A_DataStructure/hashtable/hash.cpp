@@ -59,6 +59,40 @@ void printAll(){
     }
 }
 
+void add(){
+    char name[225];
+    char email[225];
+
+    bool error = true; // error checker
+
+    //validasi nama , 1-50, lebih dari 2 kata
+    while(error){
+        printf("NAME : ");
+        scanf("[^\n]", name); getchar();
+
+        if(strlen(name) >= 1 && strlen(name) <= 50 && strchr(name, ' ')) error = false;
+    }
+    error = true;
+
+    while(error){
+        printf("EMAIL : ");
+        scanf("[^\n]", email); getchar();
+
+        //validasi hanya ada 1 simbol @, posisi harus @[domain].com
+        // posisi @ tidak bolh paling dpn
+
+        int occur = 0;
+        for(int i = 0; email[i] != '\0'; i++){
+            if(email[0] == '@')
+                break; 
+            else if(email[i] == '@') occur++;
+        }
+        if(occur == 1 && (strstr(email, "@") + 1< strstr(email, ".com"))) error = false;
+    }
+
+    push(name, email);
+}
+
 int main(){
     srand(time(NULL));
     push("mrvn", "mrvn@mail.cm");
