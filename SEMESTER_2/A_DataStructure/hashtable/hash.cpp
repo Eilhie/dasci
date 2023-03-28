@@ -68,7 +68,7 @@ void add(){
     //validasi nama , 1-50, lebih dari 2 kata
     while(error){
         printf("NAME : ");
-        scanf("[^\n]", name); getchar();
+        scanf("%[^\n]", name); getchar();
 
         if(strlen(name) >= 1 && strlen(name) <= 50 && strchr(name, ' ')) error = false;
     }
@@ -76,7 +76,7 @@ void add(){
 
     while(error){
         printf("EMAIL : ");
-        scanf("[^\n]", email); getchar();
+        scanf("%[^\n]", email); getchar();
 
         //validasi hanya ada 1 simbol @, posisi harus @[domain].com
         // posisi @ tidak bolh paling dpn
@@ -98,7 +98,7 @@ int main(){
     push("mrvn", "mrvn@mail.cm");
     push("mrvn", "rvn@mail.cm");
     push("mrvn", "zion@mail.cm");
-
+    add();
     printAll();
     return 0;
 }
