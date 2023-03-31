@@ -82,6 +82,7 @@ void pop()
                 if (curr->next != NULL)
                 {
                     curr->next->prev = curr->prev;
+                    curr->prev->next = curr->next;
                 }
             }
             free(curr);

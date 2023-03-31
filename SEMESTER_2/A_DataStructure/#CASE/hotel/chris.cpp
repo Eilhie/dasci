@@ -1,209 +1,239 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 #define SIZE 100
 
 struct node
 {
-    char name[30];
-    int rclass;
-    char bookid[10];
+	char name[30];
+	int age;
+	char phone[20];
+	char rclass[10];
+	int stay;
+	char bookid[10];
 
-    node *next;
+	node *next;
 } *head[SIZE];
-
-void booking(int rclass)
-{
-    char bookid[10];
-    if (rclass == 1)
-    {
-        strcpy(bookid[0], "R");
-        strcpy(bookid[1], "E");
-    }
-    else if (rclass == 2)
-    {
-        strcpy(bookid[0], "D");
-        strcpy(bookid[1], "E");
-    }
-    else if (rclass == 3)
-    {
-        strcpy(bookid[0], "S");
-        strcpy(bookid[1], "U");
-    }
-
-    for (int i = 2; i < 5; i++)
-    {
-        strcpy(bookid[i], (char)rand() % 10);
-    }
-
-    return bookid;
-}
 
 int hash(char bookid[])
 {
-    int x = 0;
-    for (int i = 2; i < 5; i++)
-    {
-        x += bookid[i];
-    }
-    x = x - 1;
+	int x = 0;
+	for (int i = 2; i < 5; i++)
+	{
+		x += bookid[i];
+	}
+	x = x - 1;
 
-    int key = x % SIZE;
+	int key = x % SIZE;
 
-    return key;
+	return key;
 }
 
-node *createnew(char name[], int rclass, char bookid[])
+node *createnew(char iname[], int iage, char phone[], char rclass[], int istay)
 {
-    node *newnode = (node *)malloc(sizeof(node));
-    strcpy(newnode->name, name);
-    newnode->rclass = rclass;
-    strcpy(newnode->bookid, bookid);
-    newnode->next = NULL;
+	node *temp = (node *)malloc(sizeof(node));
+	sprintf(temp->bookid, "%c%d%.3d", toupper(rclass[0]), toupper(rclass[1]), rand() % 1000);
+	strcpy(temp->name, iname);
+	temp->age = iage;
+	strcpy(temp->phone, phone);
+	strcpy(temp->rclass, rclass);
+	temp->stay = istay;
 
-    return newnode;
+	return temp;
 }
 
-void push(char name[], int rclass, char bookid[])
+void push(char iname[], int iage, char phone[], char rclass[], int istay)
 {
-    node *insert = createnew(name, rclass, bookid);
-    int key = hash(bookid);
+	node *insert = createnew(iname, iage, phone, rclass, istay);
+	int key = hash(insert->bookid);
 
-    if (head[key] == NULL)
-    {
-        head[key] = insert;
-    }
-    else
-    {
-        node *curr = head[key];
-        while (curr->next != NULL)
-        {
-            curr = curr->next;
-        }
-        curr->next = insert;
-    }
+	if (head[key] == NULL)
+	{
+		head[key] = insert;
+	}
+	else
+	{
+		node *curr = head[key];
+		while (curr->next != NULL)
+		{
+			curr = curr->next;
+		}
+		curr->next = insert;
+	}
 }
 
 void pop(char bookid[])
 {
-    int key = hash(bookid);
+	int key = hash(bookid);
 
-    if (head[key] == NULL)
-    {
-        printf("Booking ID '%s' not found\n", bookid);
-        return;
-    }
+	if (head[key] == NULL)
+	{
+		printf("Booking ID '%s' not found\n", bookid);
+		return;
+	}
 
-    if (strcmp(head[key]->bookid, bookid) == 0)
-    {
-    }
+	if (strcmp(head[key]->bookid, bookid) == 0)
+	{
+		node *temp = head[key];
+		head[key] = head[key]->next;
+		free(temp);
+		printf("Booking ID '%s' successfully deleted\n", bookid);
+	}
+	else
+	{
+		node *curr = head[key];
+		while (curr->next != NULL && strcmp(curr->next->bookid, bookid) != 0)
+		{
+			curr = curr->next;
+		}
+
+		if (curr->next == NULL)
+		{
+			printf("Booking ID '%s' not found\n", bookid);
+		}
+		else
+		{
+			node *temp = curr->next;
+			curr->next = temp->next;
+			temp->next = NULL;
+			printf("Booking ID '%s' successfully deleted\n", temp->bookid);
+			free(temp);
+		}
+	}
 }
 
-void printall()
+void printbook()
 {
+	for (int i = 0; i < SIZE; i++)
+	{
+		if (head[i] != NULL)
+		{
+			node *curr = head[i];
+			while (curr->next != NULL)
+			{
+				printf("Booking ID    : %s\n", curr->bookid);
+				printf("Name          : %s\n", curr->name);
+				printf("Phone Number  : %s\n", curr->phone);
+				printf("Room Class    : %s\n", curr->rclass);
+				printf("Stay Duration : %d\n", curr->stay);
+			}
+		}
+	}
 }
 
-void search(char bookid[])
+int phoneValidation(char telp[])
 {
+	int len = strlen(telp);
+	char number[] = "+62";
+	int startlen = strlen(number);
+
+	if (strncmp(telp, number, 3) != 0)
+		return false;
+
+	int space = 0;
+	for (int i = 0; i < len; i++)
+	{
+		if (telp[i] == ' ')
+			space++;
+	}
+
+	if (space >= 1 && (len - startlen - space) == 11)
+		return true;
+	else
+		return false;
 }
 
 int main()
 {
-    int active = 1;
+	int active = 1;
 
-    while (active != 0)
-    {
-        printf("Hotel Gransylvania\n");
-        printf("----------------------------------------\n");
-        printf("1. Booking Hotel\n");
-        printf("2. View Bookings\n");
-        printf("3. Delete Bookings\n");
-        printf("----------------------------------------\n");
-        printf("Input: ");
-        int hinput;
-        scanf("%d", hinput);
+	while (active != 0)
+	{
+		printf("Hotel Gransylvania\n");
+		printf("----------------------------------------\n");
+		printf("1. Booking Hotel\n");
+		printf("2. View Bookings\n");
+		printf("3. Delete Bookings\n");
+		printf("----------------------------------------\n");
+		printf("Input: ");
+		int hinput;
+		scanf("%d", hinput);
 
-        if (hinput == 1)
-        {
-            char iname[30];
-            int iage;
-            int phone;
-            int rclass;
-            int istay;
+		if (hinput == 1)
+		{
+			char iname[30];
+			int iage;
+			char phone;
+			char rclass;
+			int istay;
 
-            printf("Name: ");
-            scanf("%[^\n]", iname);
-            getchar();
-            printf("Age [Min: 18]: ");
-            scanf("%d", iage);
-            getchar();
-            printf("Phone: ");
-            scanf("%d", phone);
-            getchar();
-            printf("Rooms\n");
-            printf("----------------------------------------\n");
-            printf("1 > Regular\n");
-            printf("2 > Deluxe\n");
-            printf("3 > Suite\n");
-            printf("----------------------------------------\n");
-            printf("Room Type: ");
-            scanf("%d", rclass);
-            getchar();
-            printf("Stay Duration: ");
-            scanf("%d", istay);
-            getchar();
-            puts("");
+			printf("Name: ");
+			scanf("%[^\n]", iname);
+			getchar();
+			printf("Age [Min: 18]: ");
+			scanf("%d", iage);
+			getchar();
 
-            bookid = booking(rclass);
-            printf("Name       : %s\n", iname);
-            printf("Age        : %d\n", iage);
-            printf("Phone      : %d\n", phone);
+			if (iage >= 18)
+			{
+				printf("Phone: ");
+				scanf("%[^\n]", phone);
+				getchar();
 
-            if (rclass == 1)
-            {
-                printf("Room Class : Regular\n");
-            }
-            else if (rclass == 2)
-            {
-                printf("Room Class : Deluxe\n");
-            }
-            else if (rclass == 3)
-            {
-                printf("Room Class : Suite\n");
-            }
+				int validphone = phoneValidation(phone);
 
-            printf("Stay Duration : %d\n", istay);
-            printf("Booking ID    : %s\n", bookid);
+				if (validphone == true)
+				{
+					printf("Rooms\n");
+					printf("----------------------------------------\n");
+					printf("1: Regular\n");
+					printf("2: Deluxe\n");
+					printf("3: Suite\n");
+					printf("----------------------------------------\n");
+					printf("Room Type: ");
+					scanf("%[^\n]", rclass);
+					getchar();
+					printf("Stay Duration: ");
+					scanf("%d", istay);
+					getchar();
+					puts("");
 
-            push(iname, rclass, bookid);
-        }
-        else if (hinput == 2)
-        {
-            printall();
-        }
-        else if (hinput == 3)
-        {
-            del(iname);
+					if (strcmp(rclass, "Regular") == 0)
+					{
+						printf("Room Class : Regular\n");
+					}
+					else if (strcmp(rclass, "Deluxe") == 0)
+					{
+						printf("Room Class : Deluxe\n");
+					}
+					else if (strcmp(rclass, "Suite") == 0)
+					{
+						printf("Room Class : Suite\n");
+					}
 
-            int update;
-            printf("Print Updated Booking List?\n");
-            printf("Yes > Input 1 or higher\n");
-            printf("No  > Input 0 or lower\n");
-            scanf("%d", update);
+					push(iname, iage, phone, rclass, istay);
+				}
+			}
+		}
+		else if (hinput == 2)
+		{
+			printbook();
+			active = 0;
+		}
+		else if (hinput == 3)
+		{
+			char bookid[10];
+			scanf("%[^\n]", bookid);
+			pop(bookid);
+		}
+		puts("");
+		printf("Continue?");
+		printf("Yes > Input any non-zero number\n");
+		printf("No  > Input 0\n");
+		scanf("%d", active);
+	}
 
-            if (update >= 1)
-            {
-                printall();
-            }
-        }
-        puts("");
-        printf("Continue?")
-            printf("Yes > Input any non-zero number\n");
-        printf("No  > Input 0\n");
-        scanf("%d", active);
-    }
-
-    return 0;
+	return 0;
 }
-TheLab.cpp 4 KB
