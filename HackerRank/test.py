@@ -1,9 +1,13 @@
-import numpy as np
+def make_list(number):
+    names = []
+    for item in range(number):
+        names.append(input("enter name "))
+    print(names)
 
-arr = [2, 1, 3, 1, 4, 2, 3, 2, 1]
+number = int(input("number of name"))
+names = make_list(number)
 
-arr = np.array(arr)
+for name in names:
+    if name[1] == "A":
+        print("name", name, " start with A")
 
-arr = np.linalg.inv(arr)
-
-print(arr)
